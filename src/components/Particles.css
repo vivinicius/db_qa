@@ -1,0 +1,9 @@
+.particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Mantém as partículas no fundo */
+  background: radial-gradient(circle, #181c46, #000814); /* Fundo com gradiente */
+}

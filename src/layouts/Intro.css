@@ -1,0 +1,26 @@
+.intro-content {
+    font-size: 1rem; /* Tamanho de fonte padrão */
+    line-height: 1.8; /* Espaçamento entre linhas específico */
+    color: #ffffff; /* Cor do texto */
+    font-family: 'OpenSauceOne', sans-serif;
+  }
+  
+  .intro-content h3 {
+    margin-top: 1.5rem; /* Espaçamento maior antes do cabeçalho */
+    font-size: 1.3rem; /* Tamanho maior para os títulos */
+    color: #0056b3; /* Cor específica para os cabeçalhos */
+  }
+  
+  .intro-content ul {
+    padding-left: 2rem; /* Indentar listas mais profundamente */
+    margin-bottom: 1.5rem; /* Espaçamento inferior */
+  }
+  
+  .intro-content li {
+    margin-bottom: 0.5rem; /* Espaçamento menor entre itens */
+  }
+  
+  .intro-content ol {
+    margin-bottom: 2rem; /* Espaçamento inferior maior para listas ordenadas */
+  }
+  

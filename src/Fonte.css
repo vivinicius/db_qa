@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'OpenSauceOne';
+    src: url('./OpenSauceOne-Regular.ttf') format('truetype'); /* Caminho relativo ao CSS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'OpenSauceOne', sans-serif;
+}

@@ -1,0 +1,71 @@
+.automacao-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  text-align: left;
+  cursor: pointer;
+  background: #ffffff00; /* Gradiente preto para transparente */
+  font-size: 1.2rem;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  color: #fff;
+  font-family: 'OpenSauceOne', sans-serif;
+}
+
+
+.automacao-sidebar-header {
+  margin-bottom: 1rem;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.automacao-sidebar-header p {
+  font-size: 2.3rem;
+  color: #ffffff;
+  font-family: 'OpenSauceOne', sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #2faef7, #a707f1); /* Degradê de roxo para rosa */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: inherit; /* Mantém o tamanho do texto */
+  font-family: inherit; /* Mantém a fonte definida anteriormente */
+  font-weight: bold; /* Negrito */
+}
+
+
+.automacao-button:hover {
+  background-color: linear-gradient(to right, rgb(22, 5, 49), transparent);
+  transform: scale(1.04);
+}
+
+.automacao-content-inner {
+  max-height: 0; /* Altura inicial */
+  overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
+  transition: max-height 0.4s ease; /* Transição suave ao expandir/fechar */
+}
+
+.automacao-content-inner.open {
+  max-height: 1000px; /* Altura suficiente para expandir todo o conteúdo */
+}
+
+.automacao-sidebar {
+  margin-left: 1rem;
+  width: 23%;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+html, body, #root {
+  height: 100%;
+}

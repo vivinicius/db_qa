@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* Alinha o ícone à esquerda e os botões à direita */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 0.9rem 2rem;
+  color: white;
+}
+
+.header-logo {
+  height: 50px; /* Define a altura do ícone */
+  width: auto; /* Mantém a proporção da imagem */
+}
+
+.nav {
+  display: flex;
+  gap: 1rem; /* Espaçamento entre os botões */
+  margin-top: 0;
+}
+
+.nav a {
+  color: #eeebe6; /* Cor cinza claro para os links */
+  text-decoration: none;
+  padding: 0.3rem 0.8rem; /* Ajusta o tamanho interno */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-color: transparent; /* Fundo transparente inicialmente */
+  border: 1px solid #eeebe6; /* Adiciona uma borda para destacar */
+}
+
+.nav a:hover {
+  background-color: #505c6b; /* Fundo mais escuro ao passar o mouse */
+  color: white; /* Texto branco ao passar o mouse */
+}
+
+.header {
+  margin-bottom: 7rem; /* Espaço de 1rem entre o header e os botões abaixo */
+}

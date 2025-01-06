@@ -1,0 +1,74 @@
+.parte1-content {
+  max-height: 900px; /* Altura máxima para rolagem */
+  overflow-y: auto; /* Ativa rolagem vertical */
+  padding: 1rem; /* Espaçamento interno */
+  background-color: #101c37a6; /* Fundo */
+  border-radius: 4px; /* Cantos arredondados */
+  word-wrap: break-word; /* Quebra de palavras longas */
+  white-space: pre-wrap; /* Mantém quebras de linha */
+  line-height: 1.5; /* Espaçamento entre linhas */
+  font-family: 'OpenSauceOne', sans-serif;
+  color: #dbdbdb;
+  font-size: 1rem; /* Tamanho de fonte padrão */
+  margin-bottom: 1rem; /* Espaçamento inferior */
+  text-align: justify; /* Justifica o texto */
+  
+  /* Gradiente na borda */
+  border: 1px solid transparent; /* Define a largura da borda */
+  border-image: linear-gradient(to right, transparent 50%, #7b2ff7 90%, #00d4ff);
+  border-image-slice: 1; /* Aplica o gradiente em toda a borda */
+}
+
+
+
+/* Personalização da barra de rolagem */
+.parte1-content::-webkit-scrollbar {
+  width: 10px; /* Largura da barra */
+  background-color: #1b2949; /* Cor de fundo da barra */
+}
+
+.parte1-content::-webkit-scrollbar-thumb {
+  background-color: #0e0e0ea1; /* Cor do "thumb" */
+  border-radius: 5px; /* Arredonda as bordas */
+  border: 2px solid #101c37; /* Borda para criar espaçamento */
+}
+
+.parte1-content::-webkit-scrollbar-track {
+  background-color: #1b2949; /* Fundo do trilho */
+  border-radius: 5px; /* Arredonda as bordas do trilho */
+}
+
+.parte1-content p {
+  margin: 0.5rem 0; /* Espaçamento entre parágrafos */
+}
+
+.parte1-content h3 {
+  margin-top: 1rem; /* Espaçamento acima do cabeçalho */
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do cabeçalho */
+  font-size: 1.2rem; /* Tamanho maior para destaque */
+  color: #dbdbdb; /* Cor do cabeçalho */
+}
+
+.parte1-content ul,
+.parte1-content ol {
+  padding-left: 1.5rem; /* Indentar listas */
+  margin: 0.5rem 0; /* Espaçamento entre listas e outros elementos */
+}
+
+.parte1-content li {
+  margin-bottom: 0.3rem; /* Espaçamento menor entre itens da lista */
+}
+
+.parte1-content pre {
+  background-color: #262a33; /* Fundo para blocos de código */
+  padding: 1rem; /* Espaçamento interno */
+  border-radius: 4px; /* Cantos arredondados */
+  overflow-x: auto; /* Permitir rolagem horizontal */
+  font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+  font-size: 0.9rem; /* Tamanho menor para código */
+  margin: 1rem 0; /* Espaçamento inferior */
+}
+
+.parte1-content strong {
+  color: #dbdbdb; /* Destaque para negrito */
+}
