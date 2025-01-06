@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/db_qa/static/css/main.f7f648b4.css",
-    "main.js": "/db_qa/static/js/main.c0a49d8f.js",
+    "main.css": "/db_qa/static/css/main.82449cf6.css",
+    "main.js": "/db_qa/static/js/main.3f4f9831.js",
     "static/media/OpenSauceOne-Regular.ttf": "/db_qa/static/media/OpenSauceOne-Regular.ad899c4b043bde24150b.ttf",
     "index.html": "/db_qa/index.html",
-    "main.f7f648b4.css.map": "/db_qa/static/css/main.f7f648b4.css.map",
-    "main.c0a49d8f.js.map": "/db_qa/static/js/main.c0a49d8f.js.map"
+    "main.82449cf6.css.map": "/db_qa/static/css/main.82449cf6.css.map",
+    "main.3f4f9831.js.map": "/db_qa/static/js/main.3f4f9831.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7f648b4.css",
-    "static/js/main.c0a49d8f.js"
+    "static/css/main.82449cf6.css",
+    "static/js/main.3f4f9831.js"
   ]
 }
