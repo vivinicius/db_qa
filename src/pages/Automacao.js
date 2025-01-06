@@ -26,8 +26,6 @@ const Automacao = () => {
     navigate(`/automacao/${key}`);
   };
 
-  const currentSection = sections[expanded] || sections['intro'];
-
   return (
     <div style={{ display: 'flex', flexDirection: 'row', height: '100vh' }}>
       {/* Botões à esquerda */}
