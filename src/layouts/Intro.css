@@ -1,8 +1,19 @@
 .intro-content {
-    font-size: 1rem; /* Tamanho de fonte padrão */
-    line-height: 1.8; /* Espaçamento entre linhas específico */
-    color: #ffffff; /* Cor do texto */
-    font-family: 'OpenSauceOne', sans-serif;
+  max-height: 900px; /* Altura máxima para rolagem */
+  overflow-y: auto; /* Ativa rolagem vertical */
+  padding: 1rem; /* Espaçamento interno */
+  /* background-color: #101c37; Fundo */
+  border-radius: 4px; /* Cantos arredondados */
+  word-wrap: break-word; /* Quebra de palavras longas */
+  line-height: 1.5; /* Espaçamento entre linhas */
+  font-family: 'OpenSauceOne', sans-serif;
+  font-size: 2rem; /* Tamanho de fonte padrão */
+  margin-bottom: 1rem; /* Espaçamento inferior */
+  color: #fff;
+    /* Gradiente na borda */
+    border: 1px solid transparent; /* Define a largura da borda */
+    border-image: linear-gradient(to right, transparent 50%, #7b2ff7 90%, #00d4ff);
+    border-image-slice: 1; /* Aplica o gradiente em toda a borda */
   }
   
   .intro-content h3 {

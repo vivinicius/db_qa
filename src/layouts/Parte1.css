@@ -2,7 +2,7 @@
   max-height: 900px; /* Altura máxima para rolagem */
   overflow-y: auto; /* Ativa rolagem vertical */
   padding: 1rem; /* Espaçamento interno */
-  background-color: #101c37a6; /* Fundo */
+  /* background-color: #101c37a6; Fundo */
   border-radius: 4px; /* Cantos arredondados */
   word-wrap: break-word; /* Quebra de palavras longas */
   white-space: pre-wrap; /* Mantém quebras de linha */
@@ -15,7 +15,7 @@
   
   /* Gradiente na borda */
   border: 1px solid transparent; /* Define a largura da borda */
-  border-image: linear-gradient(to right, transparent 50%, #7b2ff7 90%, #00d4ff);
+  border-image: linear-gradient(to right, transparent 30%, #7b2ff7 90%, #00d4ff);
   border-image-slice: 1; /* Aplica o gradiente em toda a borda */
 }
 
@@ -60,7 +60,7 @@
 }
 
 .parte1-content pre {
-  background-color: #262a33; /* Fundo para blocos de código */
+  background-color: #272834; /* Fundo para blocos de código */
   padding: 1rem; /* Espaçamento interno */
   border-radius: 4px; /* Cantos arredondados */
   overflow-x: auto; /* Permitir rolagem horizontal */

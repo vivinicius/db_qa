@@ -5,7 +5,7 @@ import '../layouts/Header.css';
 const Header = () => (
   <header className="header">
     <img 
-      src="/dblogo.png" /* Substitua pelo caminho da sua imagem */
+      src={`${process.env.PUBLIC_URL}/dblogo.png`} // Usa o PUBLIC_URL para ajustar o caminho
       alt="Logo da Empresa" 
       className="header-logo" 
     />

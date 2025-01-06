@@ -6,7 +6,7 @@ import Automacao from './pages/Automacao';
 import Particles from './components/Particles'; // Importando o componente de partículas
 
 const App = () => (
-  <Router>
+  <Router basename="/db_qa"> {/* Configurando o basename para GitHub Pages */}
     <Particles /> {/* Adicionando o fundo animado de partículas */}
     <Header />
     <Routes>
