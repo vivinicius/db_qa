@@ -47,7 +47,7 @@ const Particles = () => {
     }
 
     function init() {
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < 6; i++) {
         const size = Math.random() * 3 + 1;
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;

@@ -101,7 +101,7 @@ pom.xml: Arquivo de configuração do Maven, onde são declaradas as dependênci
           </button>
           <pre
             style={{
-              backgroundColor: '#313131ad',
+              backgroundColor: '#272834',
               padding: '1rem',
               borderRadius: '4px',
               overflowX: 'auto',
