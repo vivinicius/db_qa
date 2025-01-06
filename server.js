@@ -3,6 +3,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const { Configuration, OpenAIApi } = require('openai');
 
+require('dotenv').config();
+
 // Configuração do OpenAI
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY, // Use uma variável de ambiente

@@ -9,7 +9,7 @@ export const Parte3Content = () => {
 
   const corrigirResposta = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/corrigir', {
+      const response = await axios.post('https://db-api-lf1e.onrender.com/corrigir', {
         pergunta,
         respostaUsuario,
       });
@@ -28,7 +28,6 @@ export const Parte3Content = () => {
         onChange={(e) => setRespostaUsuario(e.target.value)}
         placeholder="Digite sua resposta aqui..."
         rows={5}
-        style={{ width: '100%', marginBottom: '1rem' , backgroundColor : '#313131ad'}}
       />
       <button
         onClick={corrigirResposta}
