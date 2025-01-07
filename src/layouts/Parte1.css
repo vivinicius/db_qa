@@ -2,13 +2,12 @@
   max-height: 900px; /* Altura máxima para rolagem */
   overflow-y: auto; /* Ativa rolagem vertical */
   padding: 1rem; /* Espaçamento interno */
-  /* background-color: #101c37a6; Fundo */
   border-radius: 4px; /* Cantos arredondados */
   word-wrap: break-word; /* Quebra de palavras longas */
   white-space: pre-wrap; /* Mantém quebras de linha */
   line-height: 1.5; /* Espaçamento entre linhas */
   font-family: 'OpenSauceOne', sans-serif;
-  color: #dbdbdb;
+  color: #fff;
   font-size: 1rem; /* Tamanho de fonte padrão */
   margin-bottom: 1rem; /* Espaçamento inferior */
   text-align: justify; /* Justifica o texto */
@@ -18,8 +17,6 @@
   border-image: linear-gradient(to right, transparent 30%, #7b2ff7 90%, #00d4ff);
   border-image-slice: 1; /* Aplica o gradiente em toda a borda */
 }
-
-
 
 /* Personalização da barra de rolagem */
 .parte1-content::-webkit-scrollbar {
@@ -40,13 +37,44 @@
 
 .parte1-content p {
   margin: 0.5rem 0; /* Espaçamento entre parágrafos */
+  font-size: 1.1rem; /* Aumenta o tamanho do texto */
 }
 
 .parte1-content h3 {
   margin-top: 1rem; /* Espaçamento acima do cabeçalho */
   margin-bottom: 0.5rem; /* Espaçamento abaixo do cabeçalho */
   font-size: 1.2rem; /* Tamanho maior para destaque */
-  color: #dbdbdb; /* Cor do cabeçalho */
+  color: #fff; /* Cor do cabeçalho */
+}
+
+.parte1-content h1 {
+  margin-top: 1rem; /* Espaçamento acima do cabeçalho */
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do cabeçalho */
+  color: #fff; /* Cor do cabeçalho */
+}
+
+.parte1-content h2 {
+  margin-top: 1rem; /* Espaçamento acima do cabeçalho */
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do cabeçalho */
+  color: #fff; /* Cor do cabeçalho */
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #7b2ff7, #00d4ff); /* Gradiente do texto */
+  -webkit-background-clip: text; /* Define o fundo do texto */
+  -webkit-text-fill-color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+  font-weight: bold; /* Negrito */
+}
+
+.gradient-text2 {
+  background: linear-gradient(to right, #29bbff, #db00e2); /* Gradiente do texto */
+  -webkit-background-clip: text; /* Define o fundo do texto */
+  -webkit-text-fill-color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+  font-size: 2rem; /* Tamanho maior para destaque */
+}
+
+.subtitulo-parte1 {
+  font-size: 1.6rem; /* Tamanho maior para destaque */
 }
 
 .parte1-content ul,
@@ -64,11 +92,25 @@
   padding: 1rem; /* Espaçamento interno */
   border-radius: 4px; /* Cantos arredondados */
   overflow-x: auto; /* Permitir rolagem horizontal */
-  font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+  font-family: 'OpenSauceOne', sans-serif;
   font-size: 0.9rem; /* Tamanho menor para código */
   margin: 1rem 0; /* Espaçamento inferior */
 }
 
 .parte1-content strong {
-  color: #dbdbdb; /* Destaque para negrito */
+  color: #cdb8ff; /* Destaque para negrito */
 }
+
+.parte1-content h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: normal; /* Define peso normal para o texto */
+}
+
+.parte1-content h3 strong {
+  font-weight: bold; /* Negrito apenas para o texto dentro do <strong> */
+}
+
+

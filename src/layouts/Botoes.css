@@ -14,6 +14,11 @@
   font-family: 'OpenSauceOne', sans-serif;
 }
 
+.automacao-button.active {
+  background-color: #0000004f; /* Fundo para botão ativo */
+  color: #ffffff; /* Texto branco */
+  font-weight: bold; /* Destaca o botão ativo */
+}
 
 .automacao-sidebar-header {
   margin-bottom: 1rem;
@@ -36,20 +41,16 @@
   font-weight: bold; /* Negrito */
 }
 
-
-.automacao-button:hover {
-  background-color: linear-gradient(to right, rgb(22, 5, 49), transparent);
-  transform: scale(1.04);
+.automacao-content {
+  opacity: 0;
+  transform: translateX(100%); /* Começa fora da tela, à direita */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Animação suave */
+  position: relative;
 }
 
-.automacao-content-inner {
-  max-height: 0; /* Altura inicial */
-  overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
-  transition: max-height 0.4s ease; /* Transição suave ao expandir/fechar */
-}
-
-.automacao-content-inner.open {
-  max-height: 1000px; /* Altura suficiente para expandir todo o conteúdo */
+.automacao-content.show {
+  opacity: 1;
+  transform: translateX(0); /* Volta à posição original */
 }
 
 .automacao-sidebar {
@@ -59,6 +60,39 @@
   overflow-y: auto;
   padding: 1rem;
   box-sizing: border-box;
+}
+
+.subbuttons-container {
+  margin-left: 2rem; /* Indentar subbotões */
+  display: flex;
+  flex-direction: column; /* Empilha os subbotões */
+  gap: 0.5rem; /* Espaçamento entre subbotões */
+}
+
+.automacao-subbutton {
+  display: block;
+  width: 90%;
+  padding: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  background: #00000000; /* Fundo escuro */
+  color: #fff;
+  font-family: 'OpenSauceOne', sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.automacao-subbutton.active {
+  background-color: #0000004f; /* Fundo para subbotão ativo */
+  color: #ffffff; /* Texto branco */
+  font-weight: bold; /* Destaca o subbotão ativo */
+}
+
+.automacao-subbutton:hover {
+  /* background-color: #555b6e; Fundo mais claro ao passar o mouse */
+  transform: scale(1.02); /* Pequeno aumento no hover */
 }
 
 body {

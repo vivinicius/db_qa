@@ -2,7 +2,7 @@ import '../layouts/Intro.css';
 
 const Intro = {
   id: 'intro',
-  title: 'Intro',
+  title: 'Bem-vindo(a)',
   content: `
   <div class="intro-content">
     <p>Bem-vindo(a) à apostila de estudos de automação de testes!</p>

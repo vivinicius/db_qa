@@ -32,33 +32,51 @@ const Parte1 = {
 
     return (
       <div class="parte1-content">
-        <h3>Ferramentas Necessárias:</h3>
+        <h1>
+  Sessão: <span className="gradient-text2">Automação Front-End</span>
+</h1>
+
+        <p><span className="subtitulo-parte1">Automação de testes front-end é a prática de escrever scripts que simulam interações de um usuário em um navegador.<br></br>
+        Esses testes garantem que a interface gráfica de um sistema funcione conforme o esperado.</span></p>
+        <br></br>
+        <h2>Ferramentas Necessárias:</h2>
+        <br></br>
         <ul>
-          <li>Java</li>
-          <li>Selenium WebDriver</li>
-          <li>Maven</li>
-          <li>IDE (Eclipse, IntelliJ IDEA ou VS Code)</li>
-          <li>ChromeDriver (ou o driver do navegador de sua preferência)</li>
-          <li>Cucumber</li>
-        </ul>
+  <li>
+    <h3>
+      <strong>Java:</strong> Linguagem de programação usada para o desenvolvimento do projeto.
+    </h3>
+  </li>
+  <li>
+    <h3>
+      <strong>Selenium WebDriver:</strong> Biblioteca que permite automação de interações com navegadores.
+    </h3>
+  </li>
+  <li>
+    <h3>
+      <strong>Maven:</strong> Gerenciador de dependências e automação de build.
+    </h3>
+  </li>
+  <li>
+    <h3>
+      <strong>IDE (Eclipse, IntelliJ IDEA ou VS Code):</strong> Ambiente para desenvolvimento.
+    </h3>
+  </li>
+  <li>
+    <h3>
+      <strong>ChromeDriver:</strong> Necessário para controlar o navegador Google Chrome (ou o driver correspondente ao navegador que você preferir).
+    </h3>
+  </li>
+  <li>
+    <h3>
+      <strong>Cucumber:</strong> Ferramenta para escrever testes de forma legível, baseada em Gherkin.
+    </h3>
+  </li>
+</ul>
+<br></br>
 
-        <h3>Conceitos Iniciais:</h3>
-        <ul>
-          <li>O que é automação de testes?</li>
-          <li>Estrutura de um projeto de automação.</li>
-          <li>Configurando o ambiente.</li>
-        </ul>
-
-        <h3>Estrutura de Pastas no Projeto:</h3>
-        <pre>
-{`src/main/java: Contém o código-fonte principal.
-src/test/java: Contém os testes automatizados.
-src/test/resources: Contém arquivos de configuração e dados de teste, incluindo os arquivos .feature do Cucumber.
-target: Diretório gerado pelo Maven, onde ficam os relatórios e resultados de build.
-pom.xml: Arquivo de configuração do Maven, onde são declaradas as dependências.`}
-        </pre>
-
-        <h3>Exemplo:</h3>
+        <h2>Estrutura de Pastas no Projeto:</h2>
+        <br></br>
         <pre>
 {`meu-projeto-automacao/
 ├── src
@@ -76,13 +94,30 @@ pom.xml: Arquivo de configuração do Maven, onde são declaradas as dependênci
 ├── pom.xml
 └── target`}
         </pre>
+        <br></br>
+        <ul>
+          <li>
+          <h3>
+      <strong>Page Objects:</strong> Arquitetura que encapsula os elementos e as ações de uma página em classes específicas.
+    </h3>
+          </li>
+          <li>
+          <h3>
+      <strong>Ações Separadas:</strong> Mantenha ações genéricas (como clicar, preencher campos) centralizadas para facilitar manutenção.
+    </h3>
+          </li>
+        </ul>
 
-        <h3>Exercício 1: Configurando o Ambiente</h3>
+        <br></br>
+
+        <h2>Configurando o Ambiente</h2>
+        <br></br>
         <ol>
           <li>Crie um projeto Maven.</li>
           <li>Adicione as dependências do Selenium e Cucumber no <code>pom.xml</code>.</li>
-          <li>Configure o ChromeDriver no projeto.</li>
+          <li>Baixe a versão correspondente do ChromeDriver e adicione-o ao PATH do sistema.</li>
         </ol>
+        <br></br>
         <div style={{ position: 'relative', marginBottom: '1rem' }}>
           <button
             onClick={copyToClipboard}
@@ -127,8 +162,12 @@ pom.xml: Arquivo de configuração do Maven, onde são declaradas as dependênci
           </pre>
         </div>
 
-        <h3>Exercício 2: Primeiro Teste Automático com Cucumber</h3>
-        <p>Crie um arquivo <strong>.feature</strong> em <strong>src/test/resources/features</strong> com o seguinte conteúdo:</p>
+        <br></br>
+
+        <h2>Criando o primeiro cenário automatizado</h2>
+        <br></br>
+        <p>1 - Escreva o Cenário em <strong>Gherkin:</strong></p>
+        <p>Crie um arquivo <strong>.feature</strong> em <strong>src/test/resources/features</strong> com cenários no formato Gherkin. Por exemplo:</p>
         <pre>
 {`Feature: Login no Sauce Demo
 
@@ -138,9 +177,141 @@ pom.xml: Arquivo de configuração do Maven, onde são declaradas as dependênci
     And clico no botão de login
     Then devo ser redirecionado para a página de produtos`}
         </pre>
+        <br></br>
 
-        <h3>Exercício 3: Adicionar Cenários no Gherkin</h3>
-        <p>Adicione mais cenários ao arquivo <strong>.feature</strong> para validar diferentes comportamentos, como login inválido e logout.</p>
+        <p>2 - Crie a Classe de Execução:</p>
+        <p>Configure o <strong>Runner</strong> do <strong>Cucumber:</strong></p>
+        <pre>
+{
+  `import org.junit.runner.RunWith; 
+import io.cucumber.junit.Cucumber; 
+import io.cucumber.junit.CucumberOptions; 
+ 
+@RunWith(Cucumber.class) 
+@CucumberOptions(features = "src/test/resources/features", glue = "br.com.projeto.testes") 
+public class RunnerTest { 
+} `
+}
+        </pre>
+        <br></br>
+
+        <p>3 - Implemente os Steps:</p>
+        <p>No pacote <strong>br.com.projeto.testes</strong>, crie os steps para o cenário:</p>
+        <pre>
+        {
+          `package br.com.projeto.testes;
+
+import br.com.projeto.paginas.LoginPage;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.cucumber.java.en.*;
+import org.junit.Assert;
+
+public class LoginSteps {
+
+    private WebDriver driver;
+    private LoginPage loginPage;
+
+    @Given("que estou na página inicial")
+    public void queEstouNaPaginaInicial() {
+        driver = new ChromeDriver();
+        driver.get("https://www.saucedemo.com");
+        loginPage = new LoginPage(driver); // Inicializando o Page Object
+    }
+
+    @When("eu insiro o usuário {string} e senha {string}")
+    public void euInsiroOUsuarioESenha(String usuario, String senha) {
+        loginPage.preencherUsuario(usuario); // Usando métodos do Page Object
+        loginPage.preencherSenha(senha);
+    }
+
+    @And("clico no botão de login")
+    public void clicoNoBotaoDeLogin() {
+        loginPage.clicarLogin(); // Usando método do Page Object
+    }
+
+    @Then("devo ser redirecionado para a página de produtos")
+    public void devoSerRedirecionadoParaAPaginaDeProdutos() {
+        String urlAtual = driver.getCurrentUrl();
+        Assert.assertTrue(urlAtual.contains("inventory.html"));
+        driver.quit();
+    }
+} `
+        }
+        </pre>
+        <br></br>
+
+        <p>4 - Criando um <strong>Page Object</strong></p>
+        <p>No pacote <strong>br.com.projeto.paginas</strong>, crie uma classe chamada <strong>LoginPage.java</strong>. Essa classe representará a página de login do Sauce Demo.</p>
+        <br></br>
+
+        <pre>
+          {
+            `package br.com.projeto.paginas;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage {
+
+    private WebDriver driver;
+
+    // Localizadores dos elementos
+    private By usernameField = By.id("user-name");
+    private By passwordField = By.id("password");
+    private By loginButton = By.id("login-button");
+
+    // Construtor para inicializar o WebDriver
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    // Métodos para interagir com os elementos
+    public void preencherUsuario(String usuario) {
+        driver.findElement(usernameField).sendKeys(usuario);
+    }
+
+    public void preencherSenha(String senha) {
+        driver.findElement(passwordField).sendKeys(senha);
+    }
+
+    public void clicarLogin() {
+        driver.findElement(loginButton).click();
+    }
+} `
+          }
+        </pre>
+        <br></br>
+        <h2>Como Executar o Projeto</h2>
+        <br></br>
+        <p>Agora que o projeto está configurado, siga os passos abaixo para executá-lo:</p>
+        <br></br>
+        <ol>
+          <li>
+            <strong>Atualize as dependências Maven:</strong>
+            <ul>
+              <li>No IntelliJ IDEA: Clique com o botão direito no projeto e selecione <strong>Maven &gt; Reload Project</strong>.</li>
+              <li>No Eclipse: Clique com o botão direito no projeto e selecione <strong>Maven &gt; Update Project</strong>.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Execute o Runner:</strong>
+            <ul>
+              <li>
+                <strong>Via IDE:</strong> Na pasta <strong>src/test/java</strong>, localize a classe <strong>RunnerTest</strong>, clique com o botão direito e escolha <strong>Run 'RunnerTest'</strong>.
+              </li>
+              <li>
+                <strong>Via Maven:</strong> Abra o terminal na raiz do projeto e execute o comando:
+                <pre>
+                  <code>mvn clean test</code>
+                </pre>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Verifique os resultados:</strong> Após a execução, os resultados aparecerão no console da IDE ou do terminal. O Maven também gerará relatórios na pasta <strong>target</strong>.
+          </li>
+        </ol>
       </div>
     );
   },
