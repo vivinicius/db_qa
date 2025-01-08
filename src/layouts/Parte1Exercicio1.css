@@ -143,7 +143,7 @@
     font-family: 'OpenSauceOne', sans-serif; /* Fonte consistente */
     font-size: 1rem; /* Tamanho da fonte */
     width: 100%; /* Largura total */
-    max-height: 120px; /* Limita a altura da caixa */
+    max-height: 200px; /* Limita a altura da caixa */
     resize: none; /* Impede redimensionamento manual */
     margin-bottom: 1rem; /* Espaçamento inferior */
     box-sizing: border-box; /* Inclui padding no cálculo de largura */

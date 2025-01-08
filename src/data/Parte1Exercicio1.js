@@ -3,7 +3,7 @@ import axios from 'axios';
 import { FaRegCopy } from 'react-icons/fa';
 import '../layouts/Parte1Exercicio1.css';
 
-const Parte1Exercicio1Content = () => {
+const Parte1Exercicio1Content = ({ updateExerciseResult }) => {
   const [respostaUsuario, setRespostaUsuario] = useState('');
   const [resultado, setResultado] = useState('');
   const [loading, setLoading] = useState(false);
@@ -15,7 +15,12 @@ const Parte1Exercicio1Content = () => {
       const response = await axios.post('https://db-api-lf1e.onrender.com/corrigir', {
         respostaUsuario,
       });
-      setResultado(response.data.correção);
+      const correction = response.data.correção;
+      setResultado(correction);
+
+      // Determina se a resposta é correta ou incorreta
+      const isCorrect = correction.toLowerCase().startsWith('correto');
+      updateExerciseResult('parte1Exercicio1', isCorrect ? 'correto' : 'incorreto');
     } catch (error) {
       console.error(error);
       setResultado('Erro ao corrigir a resposta.');
@@ -23,6 +28,7 @@ const Parte1Exercicio1Content = () => {
       setLoading(false); // Desativa o loading
     }
   };
+
   const copyToClipboard = () => {
     const codeBlock = `Feature: Funcionalidades do site Sauce Demo
 
@@ -84,14 +90,12 @@ const Parte1Exercicio1Content = () => {
         >
 {`Feature: Funcionalidades do site Sauce Demo
 
-  # Cenário 1: Login com sucesso
   Scenario: Login com credenciais válidas
     Given que estou na página inicial
     When eu insiro o usuário "standard_user" e senha "secret_sauce"
     And clico no botão de login
     Then devo ser redirecionado para a página de produtos
 
-  # Cenário 2: Login com credenciais inválidas
   Scenario: Login com credenciais inválidas
     Given que estou na página inicial
     When eu insiro o usuário "invalid_user" e senha "invalid_password"
@@ -150,7 +154,7 @@ const Parte1Exercicio1Content = () => {
 const Parte1Exercicio1 = {
   id: 'parte1Exercicio1',
   title: 'Exercício 1',
-  renderContent: () => <Parte1Exercicio1Content />,
+  renderContent: (props) => <Parte1Exercicio1Content {...props} />,
 };
 
 export default Parte1Exercicio1;

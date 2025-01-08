@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { FaChevronDown, FaChevronRight, FaCheck, FaTimes } from 'react-icons/fa'; // Adiciona ícones
 import '../layouts/Botoes.css';
 
 import Intro from '../data/Intro';
@@ -20,23 +21,23 @@ const Automacao = () => {
   const { sectionId } = useParams();
   const navigate = useNavigate();
 
-  // Inicializa o estado 'expanded' e 'active'
-  const [expanded, setExpanded] = useState(sectionId && subSections[sectionId] ? '' : sectionId || 'intro');
+  const [expanded, setExpanded] = useState(
+    sectionId && subSections[sectionId] ? '' : sectionId || 'intro'
+  );
   const [active, setActive] = useState(sectionId || 'intro');
   const [currentContent, setCurrentContent] = useState(
     sections[sectionId] || sections['intro']
   );
   const [animate, setAnimate] = useState(false);
+  const [exerciseResults, setExerciseResults] = useState({}); // Armazena os resultados por exercício
 
   useEffect(() => {
-    // Atualiza o conteúdo exibido na área direita
     setAnimate(false);
     const timeout = setTimeout(() => {
       setCurrentContent(sections[sectionId] || sections['intro']);
       setAnimate(true);
     }, 100);
 
-    // Atualiza o botão ativo
     setActive(sectionId || 'intro');
 
     return () => clearTimeout(timeout);
@@ -47,17 +48,26 @@ const Automacao = () => {
       setExpanded((prev) => (prev === key ? '' : key));
       navigate(`/automacao/${key}`);
     } else {
-      setExpanded(Object.keys(subSections).find((section) =>
-        subSections[section].includes(key)
-      ) || '');
+      setExpanded(
+        Object.keys(subSections).find((section) =>
+          subSections[section].includes(key)
+        ) || ''
+      );
       setActive(key);
       navigate(`/automacao/${key}`);
     }
   };
 
+  // Atualiza o resultado de um exercício
+  const updateExerciseResult = (exerciseKey, result) => {
+    setExerciseResults((prev) => ({
+      ...prev,
+      [exerciseKey]: result,
+    }));
+  };
+
   return (
     <div style={{ display: 'flex', flexDirection: 'row', height: '100vh' }}>
-      {/* Sidebar com botões */}
       <div className="automacao-sidebar">
         <div className="automacao-sidebar-header">
           <p>
@@ -75,6 +85,11 @@ const Automacao = () => {
                 }`}
               >
                 {sections[key].title}
+                {subSections[key] && (
+                  <span style={{ float: 'right' }}>
+                    {expanded === key ? <FaChevronDown /> : <FaChevronRight />}
+                  </span>
+                )}
               </button>
               {expanded === key && subSections[key] && (
                 <div className="subbuttons-container">
@@ -87,6 +102,30 @@ const Automacao = () => {
                       }`}
                     >
                       {sections[subKey].title}
+                      {exerciseResults[subKey] === 'correto' && (
+                        <FaCheck
+                        style={{
+                          color: '#7CFC00',
+                          fontSize: '1.5rem', // Aumenta o tamanho do ícone
+                          position: 'absolute',
+                          right: '15px', // Alinha à direita
+                          top: '50%', // Centraliza verticalmente
+                          transform: 'translateY(-50%)', // Ajusta a posição vertical para centralização
+                        }}
+                      />
+                      )}
+                      {exerciseResults[subKey] === 'incorreto' && (
+                        <FaTimes
+                        style={{
+                          color: '#DC143C',
+                          fontSize: '1.5rem', // Aumenta o tamanho do ícone
+                          position: 'absolute',
+                          right: '15px', // Alinha à direita
+                          top: '50%', // Centraliza verticalmente
+                          transform: 'translateY(-50%)', // Ajusta a posição vertical para centralização
+                        }}
+                        />
+                      )}
                     </button>
                   ))}
                 </div>
@@ -94,14 +133,13 @@ const Automacao = () => {
             </React.Fragment>
           ))}
       </div>
-
-      {/* Conteúdo à direita */}
       <div style={{ flex: 1, padding: '2rem', backgroundColor: '' }}>
         <div className={`automacao-content ${animate ? 'show' : ''}`}>
           {currentContent.content ? (
             <div dangerouslySetInnerHTML={{ __html: currentContent.content }} />
           ) : (
-            currentContent.renderContent && currentContent.renderContent()
+            currentContent.renderContent &&
+            currentContent.renderContent({ updateExerciseResult }) // Passa a função para o componente de exercício
           )}
         </div>
       </div>

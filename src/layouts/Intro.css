@@ -1,37 +1,62 @@
 .intro-content {
-  max-height: 900px; /* Altura máxima para rolagem */
+  max-height: 900px; /* Altura máxima */
   overflow-y: auto; /* Ativa rolagem vertical */
   padding: 1rem; /* Espaçamento interno */
-  /* background-color: #101c37; Fundo */
   border-radius: 4px; /* Cantos arredondados */
   word-wrap: break-word; /* Quebra de palavras longas */
   line-height: 1.5; /* Espaçamento entre linhas */
   font-family: 'OpenSauceOne', sans-serif;
-  font-size: 2rem; /* Tamanho de fonte padrão */
-  margin-bottom: 1rem; /* Espaçamento inferior */
+  font-size: 1.1rem; /* Tamanho padrão */
+  margin-bottom: 2rem; /* Espaçamento inferior */
   color: #fff;
-    /* Gradiente na borda */
-    border: 1px solid transparent; /* Define a largura da borda */
-    border-image: linear-gradient(to right, transparent 50%, #7b2ff7 90%, #00d4ff);
-    border-image-slice: 1; /* Aplica o gradiente em toda a borda */
-  }
-  
-  .intro-content h3 {
-    margin-top: 1.5rem; /* Espaçamento maior antes do cabeçalho */
-    font-size: 1.3rem; /* Tamanho maior para os títulos */
-    color: #0056b3; /* Cor específica para os cabeçalhos */
-  }
-  
-  .intro-content ul {
-    padding-left: 2rem; /* Indentar listas mais profundamente */
-    margin-bottom: 1.5rem; /* Espaçamento inferior */
-  }
-  
-  .intro-content li {
-    margin-bottom: 0.5rem; /* Espaçamento menor entre itens */
-  }
-  
-  .intro-content ol {
-    margin-bottom: 2rem; /* Espaçamento inferior maior para listas ordenadas */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Centraliza o texto */
+  border: 1px solid transparent;
+  /* border-image: linear-gradient(to right, transparent 50%, #7b2ff7 90%, #00d4ff); */
+  border-image-slice: 1;
+}
+
+.intro-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.text-and-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Espaço entre texto e imagem */
+}
+
+.intro-text {
+  flex: 1;
+  text-align: justify; /* Justifica o texto */
+  font-size: 1.4rem; /* Tamanho maior para destaque */
+}
+
+.intro-image {
+  max-width: 800px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.gradient-text-itro{
+  background: linear-gradient(to right, #2ff7ed, #6200ff); /* Gradiente do texto */
+  -webkit-background-clip: text; /* Define o fundo do texto */
+  -webkit-text-fill-color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+  font-weight: bold; /* Negrito */
+}
+
+.intro-content strong {
+  color: #cdb8ff; /* Destaque para negrito */
+}
+
+.intro-text-test {
+  font-size: 1.4rem; /* Tamanho maior para destaque */
+  color: #fff; /* Cor do cabeçalho */
+}

@@ -75,42 +75,7 @@ const Parte1 = {
 </ul>
 <br></br>
 
-        <h2>Estrutura de Pastas no Projeto:</h2>
-        <br></br>
-        <pre>
-{`meu-projeto-automacao/
-├── src
-│   ├── main
-│   │   └── java
-│   │       └── br.com.projeto
-│   │           └── paginas
-│   ├── test
-│   │   └── java
-│   │       └── br.com.projeto
-│   │           └── testes
-│   └── test
-│       └── resources
-│           └── features
-├── pom.xml
-└── target`}
-        </pre>
-        <br></br>
-        <ul>
-          <li>
-          <h3>
-      <strong>Page Objects:</strong> Arquitetura que encapsula os elementos e as ações de uma página em classes específicas.
-    </h3>
-          </li>
-          <li>
-          <h3>
-      <strong>Ações Separadas:</strong> Mantenha ações genéricas (como clicar, preencher campos) centralizadas para facilitar manutenção.
-    </h3>
-          </li>
-        </ul>
-
-        <br></br>
-
-        <h2>Configurando o Ambiente</h2>
+<h2>Configurando o Ambiente -<strong> Iniciando um projeto</strong></h2>
         <br></br>
         <ol>
           <li>Crie um projeto Maven.</li>
@@ -161,6 +126,43 @@ const Parte1 = {
 </dependencies>`}
           </pre>
         </div>
+
+        <br></br>
+
+        <h2>Estruturação de Pastas no Projeto</h2>
+        <p>Utilize a seguinte estrutura para organização de pastas no seu projeto:</p>
+        <br></br>
+        <pre>
+{`meu-projeto-automacao/
+├── src
+│   ├── main
+│   │   └── java
+│   │       └── br.com.projeto
+│   │           └── paginas
+│   ├── test
+│   │   └── java
+│   │       └── br.com.projeto
+│   │           └── testes
+│   │           └── runner
+│   └── test
+│       └── resources
+│           └── features
+├── pom.xml
+└── target`}
+        </pre>
+        <br></br>
+        <ul>
+          <li>
+          <h3>
+      <strong>Page Objects:</strong> Arquitetura que encapsula os elementos e as ações de uma página em classes específicas.
+    </h3>
+          </li>
+          <li>
+          <h3>
+      <strong>Ações Separadas:</strong> Mantenha ações genéricas (como clicar, preencher campos) centralizadas para facilitar manutenção.
+    </h3>
+          </li>
+        </ul>
 
         <br></br>
 
