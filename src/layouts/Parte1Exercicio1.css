@@ -1,5 +1,5 @@
 .parte1Exercicio1-content {
-  max-height: 900px; /* Altura máxima para rolagem */
+  height: calc(100vh - 20em); /* 100vh menos margens/paddings gerais */
   overflow-y: auto; /* Ativa rolagem vertical */
   padding: 1rem; /* Espaçamento interno */
   border-radius: 4px; /* Cantos arredondados */

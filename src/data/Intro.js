@@ -33,10 +33,6 @@ const Intro = {
               Estratégias para lidar com desafios comuns na automação, como sincronia de elementos, gestão de dados de teste e execução paralela.
             </li>
           </ul>
-          <p>
-            Ao final do curso, você estará apto(a) a criar soluções de automação completas, desde a criação de testes simples para validação de interface gráfica até a integração de seus testes
-            em pipelines de DevOps para execução contínua e relatórios automatizados.
-          </p>
         </div>
         <img
           src={`${process.env.PUBLIC_URL}/printapostila2.png`}

@@ -1,5 +1,5 @@
 .intro-content {
-  max-height: 900px; /* Altura máxima */
+  height: calc(100vh - 20em); /* 100vh menos margens/paddings gerais */
   overflow-y: auto; /* Ativa rolagem vertical */
   padding: 1rem; /* Espaçamento interno */
   border-radius: 4px; /* Cantos arredondados */
@@ -27,18 +27,20 @@
 .text-and-image {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top;
   gap: 1rem; /* Espaço entre texto e imagem */
 }
 
 .intro-text {
+  margin-top:40px;
   flex: 1;
   text-align: justify; /* Justifica o texto */
-  font-size: 1.4rem; /* Tamanho maior para destaque */
+  font-size: 1.3rem; /* Tamanho maior para destaque */
 }
 
 .intro-image {
   max-width: 800px;
+  max-height: 500px;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
   height: auto;
@@ -57,6 +59,23 @@
 }
 
 .intro-text-test {
-  font-size: 1.4rem; /* Tamanho maior para destaque */
+  font-size: 1.3rem; /* Tamanho maior para destaque */
   color: #fff; /* Cor do cabeçalho */
+}
+
+/* Personalização da barra de rolagem */
+.intro-content::-webkit-scrollbar {
+  width: 10px; /* Largura da barra */
+  background-color: #1b2949; /* Cor de fundo da barra */
+}
+
+.intro-content::-webkit-scrollbar-thumb {
+  background-color: #0e0e0ea1; /* Cor do "thumb" */
+  border-radius: 5px; /* Arredonda as bordas */
+  border: 2px solid #101c37; /* Borda para criar espaçamento */
+}
+
+.intro-content::-webkit-scrollbar-track {
+  background-color: #1b2949; /* Fundo do trilho */
+  border-radius: 5px; /* Arredonda as bordas do trilho */
 }

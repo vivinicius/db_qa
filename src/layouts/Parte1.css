@@ -1,7 +1,8 @@
 .parte1-content {
-  max-height: 900px; /* Altura máxima para rolagem */
-  overflow-y: auto; /* Ativa rolagem vertical */
+  height: calc(100vh - 20em); /* 100vh menos margens/paddings gerais */
+  overflow-y: auto; /* Ativa rolagem vertical para conteúdo excedente */
   padding: 1rem; /* Espaçamento interno */
+  box-sizing: border-box; /* Inclui padding no cálculo da altura */
   border-radius: 4px; /* Cantos arredondados */
   word-wrap: break-word; /* Quebra de palavras longas */
   white-space: pre-wrap; /* Mantém quebras de linha */
@@ -17,6 +18,8 @@
   border-image: linear-gradient(to right, transparent 30%, #7b2ff7 90%, #00d4ff);
   border-image-slice: 1; /* Aplica o gradiente em toda a borda */
 }
+
+
 
 /* Personalização da barra de rolagem */
 .parte1-content::-webkit-scrollbar {
