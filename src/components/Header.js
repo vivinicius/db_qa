@@ -10,7 +10,7 @@ const Header = () => (
       className="header-logo" 
     />
     <nav className="nav">
-      <Link to="/manual">Manual</Link>
+      <Link to="/javapage">Java</Link>
       <Link to="/automacao">Automação</Link>
     </nav>
   </header>

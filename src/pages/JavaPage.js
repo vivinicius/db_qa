@@ -3,21 +3,21 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { FaChevronDown, FaChevronRight, FaCheck, FaTimes } from 'react-icons/fa'; // Adiciona ícones
 import '../layouts/Botoes.css';
 
-import Intro from '../data/Automacao/Intro';
-import Parte1 from '../data/Automacao/Parte1';
-import Parte1Exercicio1 from '../data/Automacao/Parte1Exercicio1';
+import Intro from '../data/Java/Intro';
+import Crud from '../data/Java/Crud';
+import CorrecaoCrud from '../data/Java/CorrecaoCrud';
 
 const sections = {
   intro: Intro,
-  parte1: Parte1,
-  parte1Exercicio1: Parte1Exercicio1,
+  crud: Crud,
+  correcaoCrud: CorrecaoCrud,
 };
 
 const subSections = {
-  parte1: ['parte1Exercicio1'],
+  crud: ['correcaoCrud'],
 };
 
-const Automacao = () => {
+const JavaPage = () => {
   const { sectionId } = useParams();
   const navigate = useNavigate();
 
@@ -46,7 +46,7 @@ const Automacao = () => {
   const handleToggle = (key) => {
     if (subSections[key]) {
       setExpanded((prev) => (prev === key ? '' : key));
-      navigate(`/automacao/${key}`);
+      navigate(`/javapage/${key}`);
     } else {
       setExpanded(
         Object.keys(subSections).find((section) =>
@@ -54,7 +54,7 @@ const Automacao = () => {
         ) || ''
       );
       setActive(key);
-      navigate(`/automacao/${key}`);
+      navigate(`/javapage/${key}`);
     }
   };
 
@@ -71,7 +71,7 @@ const Automacao = () => {
       <div className="automacao-sidebar">
         <div className="automacao-sidebar-header">
           <p>
-            Conteúdo de <span className="gradient-text">Automação</span>
+            Conteúdo de <span className="gradient-text">Java</span>
           </p>
         </div>
         {Object.keys(sections)
@@ -147,4 +147,4 @@ const Automacao = () => {
   );
 };
 
-export default Automacao;
+export default JavaPage;

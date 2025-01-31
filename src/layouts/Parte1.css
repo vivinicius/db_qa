@@ -1,5 +1,5 @@
 .parte1-content {
-  height: calc(100vh - 20em); /* 100vh menos margens/paddings gerais */
+  height: calc(100vh - 15em); /* 100vh menos margens/paddings gerais */
   overflow-y: auto; /* Ativa rolagem vertical para conteúdo excedente */
   padding: 1rem; /* Espaçamento interno */
   box-sizing: border-box; /* Inclui padding no cálculo da altura */

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../layouts/Intro.css';
+import '../../layouts/Intro.css';
 
 const Intro = {
   id: 'intro',

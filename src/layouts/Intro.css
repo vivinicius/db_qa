@@ -1,5 +1,5 @@
 .intro-content {
-  height: calc(100vh - 20em); /* 100vh menos margens/paddings gerais */
+  height: calc(100vh - 15em); /* 100vh menos margens/paddings gerais */
   overflow-y: auto; /* Ativa rolagem vertical */
   padding: 1rem; /* Espaçamento interno */
   border-radius: 4px; /* Cantos arredondados */

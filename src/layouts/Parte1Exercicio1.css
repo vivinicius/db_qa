@@ -1,5 +1,5 @@
 .parte1Exercicio1-content {
-  height: calc(100vh - 20em); /* 100vh menos margens/paddings gerais */
+  height: calc(100vh - 15em); /* 100vh menos margens/paddings gerais */
   overflow-y: auto; /* Ativa rolagem vertical */
   padding: 1rem; /* Espaçamento interno */
   border-radius: 4px; /* Cantos arredondados */
@@ -180,3 +180,37 @@
     word-wrap: break-word; /* Quebra de palavras longas */
     text-align: justify; /* Justifica o texto */
   }
+
+  .lista-duas-colunas {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que os itens se ajustem responsivamente */
+    gap: 7px;        /* Espaçamento entre as colunas */
+    list-style-position: inside; /* Mantém os pontos dentro da área */
+    padding: 0;       /* Remove o espaçamento padrão da lista */
+  }
+  
+  .lista-duas-colunas li {
+    width: 48%; /* Define duas colunas */
+    list-style-type: disc; /* Mantém os marcadores como pontos padrão */
+    font-size: 1.2rem;
+  }
+
+  .lista-endereco-tres-colunas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px; /* Espaçamento horizontal e vertical menor */
+    list-style-position: inside; /* Mantém os pontos da lista */
+    padding: 0;
+    justify-content: start; /* Garante que os itens fiquem alinhados à esquerda */
+  }
+  
+  .lista-endereco-tres-colunas li {
+    width: calc(33.33% - 10px); /* Ajusta a largura para três colunas mais compactas */
+    list-style-type: disc; /* Mantém os pontos padrão */
+    font-size: 1.2rem;
+    margin: 0; /* Remove margens extras dos itens */
+  }
+
+  
+  
+  
