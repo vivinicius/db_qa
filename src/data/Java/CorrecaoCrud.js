@@ -22,7 +22,7 @@ Critérios técnicos a serem analisados:
     Avaliar a aplicação dos princípios de design SOLID.
  
 4. Clean Code:
-    Analisar nomes de variáveis, funções, comentários, formatação e tratamento de erros.
+    Analisar nomes de variáveis, funções (nomes claros e objetivos),, formatação, identação e tratamento de erros. Garantir que o código tenha poucos comentários.
  
 5. Design Patterns:
     Identificar a aplicação de padrões de projeto (Singleton, Factory, Builder, Strategy, etc.).
@@ -31,17 +31,27 @@ Critérios técnicos a serem analisados:
     Avaliar configurações para automação de builds, testes e deploys.
  
 7. Testes Unitários:
-    Examinar a criação e execução de testes unitários com frameworks como JUnit.
+    Examinar a criação e execução de testes unitários com frameworks como JUnit e Mockito.
+    Quais classes ou blocos de código não estão cobertos por testes?
  
 8. Testes de Integração:
-    Verificar o uso de ferramentas como Mockito e Wiremock.
+    Verificar existencia de testes integrados no padrão spring e/ou uso do Wiremock.
  
 9. Docker:
     Avaliar o uso de Docker e Docker Compose.
  
 10. Spring Boot:
     Analisar a implementação de controllers, services, repositories, models e DTOs.
+    Uso de interfaces e injeção de dependência.
+    Uso correto das Anotações @Component, @Service, @Repository, 
+    Uso correto nas controlles o usa das anotações @RequestMapping, @ResponseEntity, @Valid e validadores como @NotNull, @NotBlank e @Min?
+    Usou classes de request e response nas controllers, evitando expor classes de entidades?
+    Implementou em alguma rota, paginação? Se sim, favor mostrar o código.
     Foi usado e configurado o swagger?
+    Como ficou a criação de classes de entidade? Usou o conceito de imutabilidade, criando construtores bem definidos? 
+    Caso tenha usado o lombok, procurou usar corretamente o @Getter e @Setter?
+    Criou classes de exception para tratamento de erros via handler? Esse tratamento de erro pode ficar nas service e nas entidades. Avaliar pontos e mostrar código onde isso poderia ter sido melhor desenvolvido.
+    Se possível, quero que voce exiba os blocos de código que poderiam ser melhorados.
  
 11. Versionamento de Dados:
     Examinar o uso de ferramentas como Flyway para migração e controle de versões de banco de dados.
@@ -53,11 +63,11 @@ Critérios técnicos a serem analisados:
     Analisar a configuração de bancos de dados não relacionais.
  
 14. Mensageria:
-    Verificar a configuração e uso de tópicos Kafka, producers e consumers.
+    Verificar a configuração e uso de tópicos Kafka, producers e consumers ou RabbitMQ.
  
 15. REST:
     Avaliar a criação e consumo de APIs RESTful.
- 
+    Foi aplicado corretamente o uso dos verbos http para cada operação? Ex: POST para criar, UPDATE ou PATCH para Atualizar, e DELETE para remover. Caso não tenha sido feito, evidencia o código.
  
 16. Arquitetura:
     Examinar padrões arquiteturais e práticas relacionadas à escalabilidade e design de APIs.
