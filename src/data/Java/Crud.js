@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../layouts/Parte1.css';
+import '../../layouts/Java/Crud.css';
 
 const Crud = {
   id: 'crud',
@@ -7,12 +7,12 @@ const Crud = {
   renderContent: () => {
 
     return (
-      <div class="parte1-content">
+      <div class="crud-content">
         <h1>
           Desafio <span className="gradient-text2">CRUD Pessoa</span>
         </h1>
         <br></br>
-        <p><span className="subtitulo-parte1">Crie um projeto Java usando Spring Boot que implemente um CRUD para as entidades Pessoa e Endereço, que têm um relacionamento de um-para-muitos.<br></br>
+        <p><span className="subtitulo-crud">Crie um projeto Java usando Spring Boot que implemente um CRUD para as entidades Pessoa e Endereço, que têm um relacionamento de um-para-muitos.<br></br>
         </span></p>
         <br></br>
         <h2>A entidade Pessoa deve ter os seguintes campos: </h2>

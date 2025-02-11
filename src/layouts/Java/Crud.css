@@ -1,4 +1,4 @@
-.parte1-content {
+.crud-content {
   height: calc(100vh - 15em); /* 100vh menos margens/paddings gerais */
   overflow-y: auto; /* Ativa rolagem vertical para conteúdo excedente */
   padding: 1rem; /* Espaçamento interno */
@@ -13,48 +13,46 @@
   margin-bottom: 1rem; /* Espaçamento inferior */
   text-align: justify; /* Justifica o texto */
   
-  /* Gradiente na borda */
-
 }
 
 
 
 /* Personalização da barra de rolagem */
-.parte1-content::-webkit-scrollbar {
+.crud-content::-webkit-scrollbar {
   width: 10px; /* Largura da barra */
   background-color: #1b2949; /* Cor de fundo da barra */
 }
 
-.parte1-content::-webkit-scrollbar-thumb {
+.crud-content::-webkit-scrollbar-thumb {
   background-color: #0e0e0ea1; /* Cor do "thumb" */
   border-radius: 5px; /* Arredonda as bordas */
   border: 2px solid #101c37; /* Borda para criar espaçamento */
 }
 
-.parte1-content::-webkit-scrollbar-track {
+.crud-content::-webkit-scrollbar-track {
   background-color: #1b2949; /* Fundo do trilho */
   border-radius: 5px; /* Arredonda as bordas do trilho */
 }
 
-.parte1-content p {
+.crud-content p {
   margin: 0.5rem 0; /* Espaçamento entre parágrafos */
   font-size: 1.1rem; /* Aumenta o tamanho do texto */
 }
 
-.parte1-content h3 {
+.crud-content h3 {
   margin-top: 1rem; /* Espaçamento acima do cabeçalho */
   margin-bottom: 0.5rem; /* Espaçamento abaixo do cabeçalho */
   font-size: 1.2rem; /* Tamanho maior para destaque */
   color: #fff; /* Cor do cabeçalho */
 }
 
-.parte1-content h1 {
+.crud-content h1 {
   margin-top: 1rem; /* Espaçamento acima do cabeçalho */
   margin-bottom: 0.5rem; /* Espaçamento abaixo do cabeçalho */
   color: #fff; /* Cor do cabeçalho */
 }
 
-.parte1-content h2 {
+.crud-content h2 {
   margin-top: 1rem; /* Espaçamento acima do cabeçalho */
   margin-bottom: 0.5rem; /* Espaçamento abaixo do cabeçalho */
   color: #fff; /* Cor do cabeçalho */
@@ -74,21 +72,21 @@
   font-size: 2rem; /* Tamanho maior para destaque */
 }
 
-.subtitulo-parte1 {
+.subtitulo-crud {
   font-size: 1.6rem; /* Tamanho maior para destaque */
 }
 
-.parte1-content ul,
-.parte1-content ol {
+.crud-content ul,
+.crud-content ol {
   padding-left: 1.5rem; /* Indentar listas */
   margin: 0.5rem 0; /* Espaçamento entre listas e outros elementos */
 }
 
-.parte1-content li {
+.crud-content li {
   margin-bottom: 0.3rem; /* Espaçamento menor entre itens da lista */
 }
 
-.parte1-content pre {
+.crud-content pre {
   background-color: #272834; /* Fundo para blocos de código */
   padding: 1rem; /* Espaçamento interno */
   border-radius: 4px; /* Cantos arredondados */
@@ -98,11 +96,11 @@
   margin: 1rem 0; /* Espaçamento inferior */
 }
 
-.parte1-content strong {
-  color: #cdb8ff; /* Destaque para negrito */
+.crud-content strong {
+  color: #ffffff; /* Destaque para negrito */
 }
 
-.parte1-content h3 {
+.crud-content h3 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
@@ -110,7 +108,7 @@
   font-weight: normal; /* Define peso normal para o texto */
 }
 
-.parte1-content h3 strong {
+.crud-content h3 strong {
   font-weight: bold; /* Negrito apenas para o texto dentro do <strong> */
 }
 

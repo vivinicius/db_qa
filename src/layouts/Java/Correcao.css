@@ -13,6 +13,9 @@
   text-align: justify; /* Justifica o texto */
   
   /* Gradiente na borda */
+  border: 1px solid transparent; /* Define a largura da borda */
+  border-image: linear-gradient(to right, transparent 30%, #7b2ff7 90%, #00d4ff);
+  border-image-slice: 1; /* Aplica o gradiente em toda a borda */
 }
 
 /* Personalização da barra de rolagem */

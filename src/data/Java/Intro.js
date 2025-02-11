@@ -7,10 +7,9 @@ const Intro = {
   renderContent: () => (
     <div className="intro-content">
       <p className="intro-title">
-        Bem-vindo(a) à apostila de estudos de{' '}
+        Bem-vindo(a) à apostila de estudos de {' '}
         <span className="gradient-text">Java!</span> 
       </p>
-      <div className="text-and-image">
         <div className="intro-text">
         <div className="intro-text-test">
           <p>
@@ -34,12 +33,6 @@ const Intro = {
             </li>
           </ul>
         </div>
-        <img
-          src={`${process.env.PUBLIC_URL}/printapostila2.png`}
-          alt="Print da Apostila"
-          className="intro-image"
-        />
-      </div>
     </div>
   ),
 };
