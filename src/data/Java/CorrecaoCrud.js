@@ -155,7 +155,7 @@ ENUNCIADO DO DESAFIO:
   return (
     <div className="parte1-content">
       <h1>
-        Correção: <span className="gradient-text2">Adicione seu link do repositório git para correção do desafio</span>
+      <span className="gradient-text2">Correção: </span>Adicione seu link do repositório git para correção do desafio
       </h1>
       {/* Integração da API */}
       <div className="parte1Exercicio1-but">
