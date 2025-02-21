@@ -6,14 +6,24 @@ import '../layouts/Botoes.css';
 import Intro from '../data/Automacao/Intro';
 import Parte1 from '../data/Automacao/Parte1';
 import Parte1Exercicio1 from '../data/Automacao/Parte1Exercicio1';
+import DesafioCypress from '../data/Automacao/DesafioCypress';
+import CorrecaoCypress from '../data/Automacao/CorrecaoCypress';
+import DesafioSelenium from '../data/Automacao/DesafioSelenium';
+import CorrecaoSelenium from '../data/Automacao/CorrecaoSelenium';
 
 const sections = {
   intro: Intro,
+  desafioCypress: DesafioCypress,
+  // correcaoCypress: CorrecaoCypress,
+  desafioSelenium: DesafioSelenium,
+  // correcaoSelenium: CorrecaoSelenium,
   parte1: Parte1,
   parte1Exercicio1: Parte1Exercicio1,
 };
 
 const subSections = {
+  // desafioCypress: ['correcaoCypress'],
+  // desafioSelenium: ['correcaoSelenium'],
   parte1: ['parte1Exercicio1'],
 };
 
