@@ -1,0 +1,60 @@
+Desafio de Automação de API - Sicredi
+Objetivo:
+Desenvolver testes automatizados para as APIs fornecidas, garantindo a validação de suas funcionalidades e respostas.​
+
+Pré-Requisitos:
+Conhecimento em ferramentas de automação de testes de API.​
+Familiaridade com métodos HTTP e códigos de status.​
+APIs Disponíveis para Teste:
+GET /test
+Endpoint para validação básica da API.
+
+GET /users
+Retorna a lista de usuários cadastrados.
+
+POST /auth/login
+Realiza a autenticação de um usuário.
+
+GET /auth/products
+Lista produtos disponíveis (requer autenticação).
+
+POST /products/add
+Adiciona um novo produto ao catálogo.
+
+GET /products
+Retorna a lista de produtos disponíveis.
+
+GET /products/{id}
+Obtém detalhes de um produto específico pelo ID.
+
+Tarefas a Serem Realizadas:
+Planejamento dos Testes:
+Identificar cenários de teste para cada endpoint, considerando:​
+
+Requisições válidas e inválidas.​
+Validação de campos obrigatórios.​
+Respostas esperadas (códigos de status e payload).​
+Implementação dos Testes:
+Desenvolver scripts de automação que cubram os cenários planejados, utilizando uma ferramenta adequada para testes de API.​
+
+Execução e Relatórios:
+Executar os testes e gerar relatórios detalhados, destacando:​
+
+Cenários executados.​
+Resultados obtidos.​
+Possíveis falhas e inconsistências encontradas.​
+Critérios de Avaliação:
+Cobertura de Testes:
+Amplitude e profundidade dos cenários testados.​
+
+Qualidade da Automação:
+Organização, clareza e eficiência dos scripts de teste.​
+
+Análise de Resultados:
+Capacidade de identificar e relatar falhas ou comportamentos inesperados das APIs.​
+
+Documentação:
+Incluir instruções claras sobre como configurar, executar os testes e interpretar os resultados.
+
+Relatório:
+Fornecer um relatório consolidado dos testes realizados, destacando principais achados e conclusões.

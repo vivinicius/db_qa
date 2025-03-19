@@ -3,16 +3,6 @@ import axios from 'axios';
 import '../../../layouts/Cypress/Correcao.css';
 import ReactMarkdown from 'react-markdown';
 
-const cleanMarkdown = (markdown) => {
-  return markdown
-    // Remove qualquer linha vazia (espaços, tabs ou só \n)
-    .replace(/^\s*$(?:\r\n?|\n)/gm, '')
-    // Remove quebras extras no final
-    .replace(/\n{2,}/g, '\n');
-};
-
-
-
 // === Função para ler arquivo .txt ===
 const readTxtFile = async (txtPath) => {
   const response = await fetch(txtPath);
@@ -136,7 +126,7 @@ ${desafioTexto}
     p: ({node, ...props}) => <p style={{ margin: '0', padding: '0' }} {...props} />
   }}
 >
-  {cleanMarkdown(resultado)}
+  {resultado}
 </ReactMarkdown>
 
 

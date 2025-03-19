@@ -128,8 +128,6 @@ ${desafioTexto}
 >
   {resultado}
 </ReactMarkdown>
-
-
   </div>
 )}
       </div>
