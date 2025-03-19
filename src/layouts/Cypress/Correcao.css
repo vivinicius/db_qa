@@ -97,6 +97,10 @@
   margin: 1rem 0; /* Espaçamento inferior */
 }
 
+.parte1-content h1 {
+  color: #fff;
+}
+
 .parte1Exercicio1-content strong {
   color: #cdb8ff; /* Destaque para negrito */
 }
