@@ -1,0 +1,37 @@
+Desafio de Automação com Selenium~
+INICIO DO DESAFIO
+Objetivo:
+Automatizar testes do site Sauce Demo usando Selenium com Java, incluindo:
+
+Levantamento de cenários de teste.
+Implementação dos testes.
+Geração de relatórios de execução.
+Cenários de Teste:
+Login:
+
+Teste com credenciais válidas e inválidas.
+Verificação de campos obrigatórios e mensagens de erro.
+Página de Produtos:
+
+Listagem, ordenação e validação visual dos produtos.
+Carrinho de Compras:
+
+Adição/remoção de produtos, validação de quantidade e total.
+Checkout:
+
+Preenchimento de dados, validação de campos obrigatórios e finalização da compra.
+Automação com Selenium
+Utilizar Java com Selenium.
+Estrutura modular usando Page Objects.
+Geração de relatórios com detalhes de execução (sucesso/falha).
+(Opcional) CI/CD:
+Configurar pipeline (ex: GitLab CI/CD) para execução automática a cada commit.
+Incluir relatórios e notificações de falha.
+Critérios de Avaliação:
+Abrangência dos testes.
+Qualidade e organização do código.
+Clareza dos relatórios.
+(Opcional) CI/CD bem configurado.
+Link para testes:
+https://www.saucedemo.com/v1/index.html
+FIM DO DESAFIO

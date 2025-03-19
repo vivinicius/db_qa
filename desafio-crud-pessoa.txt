@@ -1,0 +1,41 @@
+Desafio CRUD Pessoa
+Objetivo:
+Criar um projeto Java com Spring Boot implementando um CRUD para as entidades:
+
+Pessoa (1) → (N) Endereço (Relacionamento Um-para-Muitos).
+Entidade Pessoa:
+ID (único)
+CPF (único)
+Nome
+Data de Nascimento
+Entidade Endereço:
+ID (único)
+Rua
+Número
+Complemento (opcional)
+Bairro
+Cidade
+Estado
+CEP
+Requisitos do CRUD:
+Listar todas as pessoas com seus endereços.
+Criar nova pessoa com um ou mais endereços.
+Atualizar dados da pessoa e/ou endereços.
+Excluir uma pessoa e todos os seus endereços.
+Mostrar a idade da pessoa.
+Regras e Tecnologias:
+Validações básicas e tratamento de exceções.
+Banco de dados H2.
+Respostas da API no formato JSON.
+Pontos Avaliados:
+Qualidade e organização do código.
+Arquitetura do projeto.
+Boas práticas.
+Implementação completa do CRUD.
+Uso correto de RESTful.
+Testes.
+Diferenciais:
+Testes de integração.
+Uso do Swagger para documentação.
+Permitir definir um endereço principal para a pessoa.
+Implementar paginação ao listar pessoas.
