@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../layouts/Java/Crud.css';
+import '../../../layouts/Java/Crud.css';
 
 const Crud = {
   id: 'crud',

@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../layouts/Cypress/DesafioCypress.css';
+import '../../../layouts/Cypress/DesafioCypress.css';
 
 const DesafioSelenium = {
   id: 'desafioSelenium',
-  title: 'Desafio Selenium',
+  title: 'Selenium',
   renderContent: () => {
     return (
       <div className="desafiocypress-content">

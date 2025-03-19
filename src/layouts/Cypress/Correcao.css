@@ -167,20 +167,6 @@
     transition: transform 0.2s ease, background 0.3s ease; /* Animação ao passar o mouse */
   }
 
-  .resultado {
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #ffffff; /* Fundo branco */
-    border: 1px solid #ddd; /* Borda leve */
-    border-radius: 4px; /* Cantos arredondados */
-    color: #000; /* Cor do texto */
-    font-family: 'OpenSauceOne', sans-serif; /* Fonte consistente */
-    font-size: 1rem; /* Tamanho do texto */
-    line-height: 1.5; /* Espaçamento entre linhas */
-    word-wrap: break-word; /* Quebra de palavras longas */
-    text-align: justify; /* Justifica o texto */
-  }
-
   .lista-duas-colunas {
     display: flex;
     flex-wrap: wrap;  /* Permite que os itens se ajustem responsivamente */
@@ -211,6 +197,111 @@
     margin: 0; /* Remove margens extras dos itens */
   }
 
+  .resultado {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #000;
+    font-family: 'OpenSauceOne', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    text-align: justify;
+  }
+  
+  /* Reset apenas para P, Hs e outros */
+  .resultado h1,
+  .resultado h2,
+  .resultado h3,
+  .resultado h4,
+  .resultado strong,
+  .resultado p,
+  .resultado pre,
+  .resultado code {
+    all: unset;
+    color: #000; /* Forçando preto */
+    font-family: 'OpenSauceOne', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Parágrafos */
+  .resultado p {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+  }
+  
+  /* Evita espaços extras */
+  .resultado p + p {
+    margin-top: 0rem;
+  }
+  
+  /* Cabeçalhos */
+  .resultado h1,
+  .resultado h2,
+  .resultado h3,
+  .resultado h4 {
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #000 !important; /* Força para preto */
+  }
   
   
+  /* Negrito */
+  .resultado strong {
+    font-weight: bold;
+    color: #000 !important; /* 👈 Aqui é o truque: força a cor preta ignorando qualquer herança */
+  }
+  
+  /* Blocos de código */
+  .resultado pre {
+    background-color: #f4f4f4;
+    padding: 0.8rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .resultado code {
+    background-color: #f4f4f4;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* LISTAS - sem resetar! */
+  .resultado ul,
+  .resultado ol {
+    list-style-position: inside;
+    padding-left: 1rem; /* Espaço pro bullet */
+    margin-bottom: 0rem;
+    margin-top: 0.2rem;
+    color: #000; /* reforçando */
+  }
+  
+  .resultado ul {
+    list-style-type: disc;
+  }
+  
+  .resultado ol {
+    list-style-type: decimal;
+  }
+  
+  .resultado li {
+    margin-bottom: 0.2rem; /* Reduz o espaço entre itens */
+    line-height: 1.4; /* Altura da linha mais fluida */
+    padding: 0;
+    margin-top: 0;
+    color: #000; /* reforço extra */
+  }
   

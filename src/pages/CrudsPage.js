@@ -3,21 +3,31 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { FaChevronDown, FaChevronRight, FaCheck, FaTimes } from 'react-icons/fa'; // Adiciona ícones
 import '../layouts/Botoes.css';
 
-import Intro from '../data/Java/Intro';
-import Crud from '../data/Java/Crud';
-import CorrecaoCrud from '../data/Java/CorrecaoCrud';
+import Intro from '../data/Cruds/Intro';
+//import Crud from '../data/Cruds/AntigoCrudPessoa/Crud';
+//import CorrecaoCrud from '../data/Cruds/AntigoCrudPessoa/CorrecaoCrud';
+import DesafioCrudPessoa from '../data/Cruds/CrudPessoa/DesafioCrudPessoa';
+import CorrecaoCrudPessoa from '../data/Cruds/CrudPessoa/CorrecaoCrudPessoa';
+import DesafioCrudVeiculo from '../data/Cruds/CrudVeiculo/DesafioCrudVeiculo';
+import CorrecaoCrudVeiculo from '../data/Cruds/CrudVeiculo/CorrecaoCrudVeiculo';
 
 const sections = {
   intro: Intro,
-  crud: Crud,
-  correcaoCrud: CorrecaoCrud,
+  //crud: Crud,
+  //correcaoCrud: CorrecaoCrud,
+  desafioCrudPessoa: DesafioCrudPessoa,
+  correcaoCrudPessoa: CorrecaoCrudPessoa,
+  desafioCrudVeiculo: DesafioCrudVeiculo,
+  correcaoCrudVeiculo: CorrecaoCrudVeiculo
 };
 
 const subSections = {
-  crud: ['correcaoCrud'],
+  //crud: ['correcaoCrud'],
+  desafioCrudPessoa: ['correcaoCrudPessoa'],
+  desafioCrudVeiculo: ['correcaoCrudVeiculo']
 };
 
-const JavaPage = () => {
+const CrudsPage = () => {
   const { sectionId } = useParams();
   const navigate = useNavigate();
 
@@ -46,7 +56,7 @@ const JavaPage = () => {
   const handleToggle = (key) => {
     if (subSections[key]) {
       setExpanded((prev) => (prev === key ? '' : key));
-      navigate(`/javapage/${key}`);
+      navigate(`/crudspage/${key}`);
     } else {
       setExpanded(
         Object.keys(subSections).find((section) =>
@@ -54,7 +64,7 @@ const JavaPage = () => {
         ) || ''
       );
       setActive(key);
-      navigate(`/javapage/${key}`);
+      navigate(`/crudspage/${key}`);
     }
   };
 
@@ -71,7 +81,7 @@ const JavaPage = () => {
       <div className="automacao-sidebar">
         <div className="automacao-sidebar-header">
           <p>
-            Conteúdo de <span className="gradient-text">Java</span>
+            Desafios de <span className="gradient-text">Crud</span>
           </p>
         </div>
         {Object.keys(sections)
@@ -147,4 +157,4 @@ const JavaPage = () => {
   );
 };
 
-export default JavaPage;
+export default CrudsPage;

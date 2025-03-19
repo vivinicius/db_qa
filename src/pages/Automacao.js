@@ -4,27 +4,33 @@ import { FaChevronDown, FaChevronRight, FaCheck, FaTimes } from 'react-icons/fa'
 import '../layouts/Botoes.css';
 
 import Intro from '../data/Automacao/Intro';
-import Parte1 from '../data/Automacao/Parte1';
-import Parte1Exercicio1 from '../data/Automacao/Parte1Exercicio1';
-import DesafioCypress from '../data/Automacao/DesafioCypress';
-import CorrecaoCypress from '../data/Automacao/CorrecaoCypress';
-import DesafioSelenium from '../data/Automacao/DesafioSelenium';
-import CorrecaoSelenium from '../data/Automacao/CorrecaoSelenium';
+//import Parte1 from '../data/Automacao/Exercicio/Parte1';
+//import Parte1Exercicio1 from '../data/Automacao/Exercicio/Parte1Exercicio1';
+import DesafioCypress from '../data/Automacao/DesafioCypress/DesafioCypress';
+import CorrecaoCypress from '../data/Automacao/DesafioCypress/CorrecaoCypress';
+import DesafioSelenium from '../data/Automacao/DesafioSelenium/DesafioSelenium';
+import CorrecaoSelenium from '../data/Automacao/DesafioSelenium/CorrecaoSelenium';
+import DesafioSicredi from '../data/Automacao/DesafioSicredi/DesafioSicredi';
+import CorrecaoSicredi from '../data/Automacao/DesafioSicredi/CorrecaoSicredi';
 
 const sections = {
   intro: Intro,
   desafioCypress: DesafioCypress,
-  // correcaoCypress: CorrecaoCypress,
+  correcaoCypress: CorrecaoCypress,
   desafioSelenium: DesafioSelenium,
-  // correcaoSelenium: CorrecaoSelenium,
-  parte1: Parte1,
-  parte1Exercicio1: Parte1Exercicio1,
+  correcaoSelenium: CorrecaoSelenium,
+  desafioSicredi: DesafioSicredi,
+  correcaoSicredi: CorrecaoSicredi,
+  //parte1: Parte1,
+  //parte1Exercicio1: Parte1Exercicio1,
+  
 };
 
 const subSections = {
-  // desafioCypress: ['correcaoCypress'],
-  // desafioSelenium: ['correcaoSelenium'],
-  parte1: ['parte1Exercicio1'],
+  desafioCypress: ['correcaoCypress'],
+  desafioSelenium: ['correcaoSelenium'],
+  desafioSicredi: ['correcaoSicredi']
+  //parte1: ['parte1Exercicio1'],
 };
 
 const Automacao = () => {
@@ -81,7 +87,7 @@ const Automacao = () => {
       <div className="automacao-sidebar">
         <div className="automacao-sidebar-header">
           <p>
-            Conteúdo de <span className="gradient-text">Automação</span>
+            Desafios de <span className="gradient-text">Automação</span>
           </p>
         </div>
         {Object.keys(sections)

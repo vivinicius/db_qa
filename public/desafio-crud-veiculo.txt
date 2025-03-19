@@ -1,0 +1,33 @@
+Desafio CRUD - Gestão de Veículos
+Objetivo:
+Criar um projeto em Java com Spring Boot que implemente um CRUD para a entidade Carro.
+
+Entidade Carro:
+ID
+Marca (Obrigatório)
+Modelo (Obrigatório)
+Ano de Fabricação
+Placa (Obrigatório, Única)
+Tipo de Carro (SUV, Sedan, Hatch etc.) (Obrigatório)
+Valor de Mercado
+Requisitos do CRUD:
+Listar todos os carros cadastrados.
+Criar um novo carro.
+Atualizar dados de um carro.
+Excluir um carro.
+Buscar um carro pela placa.
+Regras e Tecnologias:
+Implementar validações básicas e tratamento de exceções.
+Banco de dados H2.
+Respostas da API devem ser em JSON.
+Pontos Avaliados:
+Organização e qualidade do código.
+Boas práticas.
+Atendimento completo dos requisitos CRUD.
+API seguindo padrão RESTful.
+Testes unitários.
+Diferenciais:
+Testes de integração.
+Uso de Swagger para documentação.
+Implementar paginação ao listar carros.
+Criar um endpoint para calcular a depreciação do carro com base no ano de fabricação.

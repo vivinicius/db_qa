@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../layouts/Cypress/DesafioCypress.css';
+import '../../../layouts/Cypress/DesafioCypress.css';
 
 const DesafioCypress = {
   id: 'desafioCypress',
-  title: 'Desafio Cypress',
+  title: 'Cypress',
   renderContent: () => {
     return (
       <div className="desafiocypress-content">

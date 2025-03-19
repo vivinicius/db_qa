@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { FaRegCopy } from 'react-icons/fa';
-import '../../layouts/Parte1Exercicio1.css';
+import '../../../layouts/Parte1Exercicio1.css';
 
 const Parte1Exercicio1Content = ({ updateExerciseResult }) => {
   const [respostaUsuario, setRespostaUsuario] = useState('');

@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import JavaPage from './pages/JavaPage';
+import CrudsPage from './pages/CrudsPage';
 import Automacao from './pages/Automacao';
-import SicrediPage from './pages/SicrediPage';
 import Particles from './components/Particles'; // Importando o componente de partículas
 
 const App = () => (
@@ -11,10 +10,8 @@ const App = () => (
     <Particles /> {/* Adicionando o fundo animado de partículas */}
     <Header />
     <Routes>
-      <Route path="/sicredipage" element={<SicrediPage />} />
-      <Route path="/sicredipage/:sectionId" element={<SicrediPage />} />
-      <Route path="/javapage" element={<JavaPage />} />
-      <Route path="/javapage/:sectionId" element={<JavaPage />} />
+      <Route path="/crudspage" element={<CrudsPage />} />
+      <Route path="/crudspage/:sectionId" element={<CrudsPage />} />
       <Route path="/automacao" element={<Automacao />} />
       <Route path="/automacao/:sectionId" element={<Automacao />} />
     </Routes>

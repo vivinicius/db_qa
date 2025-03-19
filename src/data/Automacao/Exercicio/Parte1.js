@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaRegCopy } from 'react-icons/fa';
-import '../../layouts/Parte1.css';
+import '../../../layouts/Parte1.css';
 
 const Parte1 = {
   id: 'parte1',

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../../layouts/Parte1Exercicio1.css';
+import '../../../layouts/Parte1Exercicio1.css';
 
 const CorrecaoCrudContent = ({ updateExerciseResult }) => {
   const [respostaUsuario, setRespostaUsuario] = useState('');
@@ -171,7 +171,7 @@ ENUNCIADO DO DESAFIO:
           disabled={loading} // Desabilita o botão enquanto carrega
           className="corrigir-button"
         >
-          {loading ? 'Carregando...' : 'Corrigir'}
+          {loading ? 'Buscando projeto e corrigindo...' : 'Corrigir'}
         </button>
         {resultado && (
           <div className="resultado">

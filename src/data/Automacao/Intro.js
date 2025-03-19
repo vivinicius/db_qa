@@ -7,32 +7,32 @@ const Intro = {
   renderContent: () => (
     <div className="intro-content">
       <p className="intro-title">
-        Bem-vindo(a) à apostila de estudos de{' '}
+        Bem-vindo(a) aos desafios de{' '}
         <span className="gradient-text">Automação de Testes!</span>
       </p>
-        <div className="intro-text">
+      <div className="intro-text">
         <div className="intro-text-test">
           <p>
-            Este material foi criado para ajudar você a desenvolver competências em
-            automação de testes <strong>front-end</strong> e <strong>back-end</strong>.
-            Ao longo deste curso, você aprenderá os fundamentos e as melhores práticas para criar testes eficientes e robustos, que garantem a qualidade e a estabilidade de sistemas modernos.
+            Este material foi desenvolvido para você colocar em prática suas habilidades em
+            automação de testes <strong>front-end</strong>, <strong>back-end</strong> e integração de sistemas.
+            Aqui, você encontrará uma série de desafios cuidadosamente elaborados para testar e aprimorar suas competências, utilizando ferramentas modernas e cenários reais do mercado.
           </p>
-          </div>
-          <p>
-            Durante os módulos, você explorará:
-          </p>
-          <ul>
-            <li>
-              Como criar cenários de testes legíveis e bem-estruturados utilizando a linguagem <strong>Gherkin</strong>.
-            </li>
-            <li>
-              Técnicas para trabalhar com frameworks de automação como <strong>Selenium</strong>, <strong>Cucumber</strong> e ferramentas de integração contínua como <strong>Jenkins</strong> e <strong>GitLab CI/CD</strong>.
-            </li>
-            <li>
-              Estratégias para lidar com desafios comuns na automação, como sincronia de elementos, gestão de dados de teste e execução paralela.
-            </li>
-          </ul>
         </div>
+        <p>
+          Ao longo dos desafios, você enfrentará:
+        </p>
+        <ul>
+          <li>
+            Criação de testes automatizados claros e eficazes com <strong>Cypress</strong> e <strong>Selenium</strong>, explorando diferentes níveis de complexidade.
+          </li>
+          <li>
+            Validação e integração de APIs REST, aplicando ferramentas como <strong>Rest-Assured</strong> e <strong>Postman</strong>.
+          </li>
+          <li>
+            Implementação de pipelines CI/CD com <strong>GitLab</strong>, além de boas práticas para manter testes rápidos, estáveis e escaláveis.
+          </li>
+        </ul>
+      </div>
     </div>
   ),
 };

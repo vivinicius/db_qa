@@ -1,0 +1,49 @@
+Desafio de Automação de Testes com Cypress
+INICIO DO DESAFIO
+Objetivo:
+Criar uma automação completa de testes para o site Sauce Demo utilizando Cypress. Deve-se realizar:
+
+O levantamento de cenários de teste;
+A implementação dos testes;
+A configuração da geração de relatórios de execução.
+Levantamento de Cenários de Teste:
+Login:
+Login com credenciais válidas e inválidas.
+Testes de campos obrigatórios.
+Validação de mensagens de erro.
+Página Produtos:
+Listagem de produtos.
+Filtros de ordenação.
+Validação visual dos produtos.
+Carrinho de Compras:
+Adição e remoção de produtos.
+Validação da quantidade e do valor total.
+Checkout:
+Preenchimento das informações.
+Validação de campos obrigatórios.
+Finalização da compra.
+Link do site a ser testado:
+https://www.saucedemo.com/v1/index.html
+
+Automação com Cypress
+Implementar cada cenário levantado utilizando Cypress.
+Criar uma estrutura de código modular e organizada (utilizando Page Objects).
+Configuração de Relatórios
+Configurar a geração de relatórios.
+Os relatórios devem apresentar detalhes de cada execução, mostrando claramente o status (sucesso ou falha) dos testes.
+(Opcional) Integração com Pipeline CI/CD
+Configurar uma pipeline (por exemplo, no GitLab CI/CD) para executar os testes automaticamente a cada commit no repositório.
+Incluir a geração dos relatórios no pipeline e configurar notificações de falha.
+Critérios de Avaliação
+Abrangência:
+Quantidade e qualidade dos cenários de teste levantados.
+
+Qualidade de Automação:
+Qualidade e organização do código de automação.
+
+Relatórios de Execução:
+Clareza e organização dos relatórios de execução.
+
+Opcional:
+Implementação e configuração do CI/CD.
+FIM DO DESAFIO
